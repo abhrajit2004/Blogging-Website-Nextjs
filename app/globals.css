@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Media Queries */
+@media (max-width: 640px) {
+  /* Custom styles */
+  nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .firstbox, .secondbox{
+    flex-direction: column;
+  }
+  .about, .blogpost, .techstacks, .field{
+    width: 90%;
+  }
+  .stacks{
+    flex-direction: column;
+  }
+}

@@ -7,24 +7,57 @@ export const metadata = {
 
 const Contact = () => {
 
+  // const [form, setForm] = useState({name: '', email: '', message: ''})
+
+  
+
+  //  const handleChange = (e)=>{
+  //   setForm(()=>({...form, [e.target.name]: e.target.value}))
+  // }
+
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+   
+  //   const response = await fetch('/api/route', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(form)
+  //    });
+
+  //    if (response.ok) {
+  //     // Handle success
+  //     console.log(form);
+  //   } else {
+  //     // Handle error
+  //     console.error('Form submission failed!');
+  //   }
+
+  //   setForm({name: '', email: '', message: ''})
+
+  // }
+
 
   return (
-    
+    <>
     <form className='mt-12 flex flex-col justify-center items-center gap-4 p-3'>
         <div className="container m-auto flex flex-col justify-center items-center gap-2">
           <label htmlFor="name">Enter your name</label>
-          <input className='bg-transparent border border-white px-2 w-[20%] h-10 rounded-lg' type="text" name="name" id="name" />
+          <input className='field bg-transparent border border-white px-2 w-[30%] h-10 rounded-lg' type="text" name="name" id="name" required />
         </div>
         <div className="container m-auto flex flex-col justify-center items-center gap-2">
           <label htmlFor="email">Enter your email</label>
-          <input className='bg-transparent border border-white  px-2 w-[40%] h-10 rounded-lg' type="email" name="email" id="email" />
+          <input className='field bg-transparent border border-white  px-2 w-[40%] h-10 rounded-lg' type="email" name="email" id="email" required />
         </div>
         <div className="container m-auto flex flex-col justify-center items-center gap-2">
           <label htmlFor="message">Enter your message</label>
-          <textarea className='bg-transparent border border-white  w-[60%] h-[200px] p-4 rounded-lg' name="message" id="message">Hi Abhrajit!</textarea>
+          <textarea defaultValue={"Hi Abhrajit!"} className='field bg-transparent border border-white  w-[60%] h-[200px] p-4 rounded-lg' name="message" id="message" required></textarea>
         </div>
-        <button className='bg-gray-900 px-4 py-2 rounded-lg transition-all hover:bg-gray-800' type="submit">Submit</button>
+        <button className='bg-gray-900 cursor-pointer px-4 py-2 rounded-lg transition-all hover:bg-gray-800' type="submit">Submit</button>
     </form>
+    </>
   
   )
 }
