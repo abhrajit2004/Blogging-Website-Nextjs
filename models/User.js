@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const {Schema, model} = mongoose;
 
-const submissionSchema = new Schema({
+const userSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -22,4 +22,4 @@ const submissionSchema = new Schema({
 },);
 
 
-export default mongoose.models.Submission || model('Submission', submissionSchema);
+export default mongoose.models.User || model('User', userSchema);
